@@ -54,7 +54,8 @@ class Corrida:FuncionalidadeCorrida {
     }
     
     func oGanhador() -> Competidor {
-        return self.listaCompetidores.randomElement()!
+        let index = Int(arc4random_uniform(UInt32(self.listaCompetidores.count-1)))
+        return self.listaCompetidores[index]
     }
     func socorrer(umaPlaca: String) {
         
